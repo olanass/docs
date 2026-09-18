@@ -1,0 +1,44 @@
+---
+title: "Contract and networks"
+description: "The canonical place to verify Olanas token contracts and supported networks."
+---
+
+<Warning>
+  **No official Olanas token contract is listed here yet.** If an address is absent from this page, treat it as unverified.
+</Warning>
+
+## Official contracts
+
+| Network | Chain ID | Contract | Status |
+| --- | ---: | --- | --- |
+| Olanas token network | TBD | Not published | Unverified |
+
+## Application networks
+
+The current application targets the following networks. These network details describe the application and do **not** confirm an Olanas token deployment.
+
+| Network | Chain ID | Native currency | Explorer |
+| --- | ---: | --- | --- |
+| Robinhood Chain | `4663` | ETH | `https://robinhoodchain.blockscout.com` |
+| Robinhood Chain Testnet | `46630` | Testnet ETH | `https://explorer.testnet.chain.robinhood.com` |
+
+## Verification checklist
+
+<Steps>
+  <Step title="Start from this page">
+    Copy the contract address only from this canonical table after its status changes to **Verified**.
+  </Step>
+  <Step title="Open the explorer">
+    Follow the linked block explorer and confirm the chain, token name, symbol, supply, and verified source.
+  </Step>
+  <Step title="Compare character by character">
+    Verify the first and last characters. Ideally compare the entire checksummed address.
+  </Step>
+  <Step title="Use a small test interaction">
+    When appropriate, test with an amount you can afford to lose before making a larger transaction.
+  </Step>
+</Steps>
+
+<Note>
+  Token names and symbols are not unique. The contract address on the correct network is the reliable identifier.
+</Note>

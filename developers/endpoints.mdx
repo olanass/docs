@@ -1,0 +1,38 @@
+---
+title: "Endpoint reference"
+description: "A concise reference for the Olanas content-paywall and facilitator routes."
+---
+
+## Paywalls
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `POST` | `/api/paywalls/create` | Create a signed text or file listing |
+| `GET` | `/api/paywalls/:id` | Read public listing metadata |
+| `GET` | `/api/paywalls/creator/:address` | List a creator's public listings and totals |
+| `GET` | `/api/paywalls/:id/download` | Receive a 402 challenge or download after verification |
+| `GET` | `/api/paywalls/gas-estimate` | Request an RPC-backed gas estimate |
+
+## Facilitator
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET` | `/facilitator/supported` | List configured assets and payment schemes |
+| `POST` | `/facilitator/verify` | Verify a proof without recording settlement |
+| `POST` | `/facilitator/settle` | Verify and persist a durable receipt |
+| `GET` | `/facilitator/receipts/:id` | Retrieve a settlement receipt |
+| `GET` | `/facilitator/analytics` | Read facilitator ledger analytics |
+
+## Browser configuration
+
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/privy/config` | Return public login and selected-network configuration |
+
+<Note>
+  Legacy email-only wallet creation routes return `410`. An email address is not authentication, and the application does not invent wallet addresses.
+</Note>
+
+## Next step
+
+This concise reference mirrors the current server routes. Before exposing a third-party API, add and validate an OpenAPI document so Mintlify can generate complete request schemas, responses, and an interactive playground.

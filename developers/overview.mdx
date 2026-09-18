@@ -1,0 +1,45 @@
+---
+title: "Developer overview"
+description: "Architecture and integration entry point for the Olanas content-payment application."
+---
+
+The Olanas repository contains a framework-light browser client and a Node.js server for creating encrypted paywalls and verifying onchain transfers.
+
+## Core capabilities
+
+<Columns cols={2}>
+  <Card title="Signed listings" icon="signature">
+    Creator wallets sign the exact listing content before creation.
+  </Card>
+  <Card title="Encrypted delivery" icon="lock-keyhole">
+    Content is encrypted at rest and decrypted only after payment verification.
+  </Card>
+  <Card title="Onchain verification" icon="badge-check">
+    The server validates the chain, receipt, recipient, asset, amount, and payer.
+  </Card>
+  <Card title="Replay control" icon="rotate-ccw">
+    A proof can recover the same purchase but cannot buy a different requirement.
+  </Card>
+</Columns>
+
+## Runtime
+
+- Node.js 22 or newer
+- Express 5
+- ethers 6
+- Static browser client with optional Privy integration
+- Local encrypted storage with optional ciphertext-only IPFS pinning
+
+## Start locally
+
+```powershell
+npm ci
+npm test
+npm run dev:networks
+```
+
+This starts the mainnet-configured application at `http://localhost:4020` and the isolated testnet application at `http://localhost:4021`.
+
+<Warning>
+  Use testnet and low-value test accounts while integrating. The test suite uses mocked providers and is not a substitute for live end-to-end validation.
+</Warning>

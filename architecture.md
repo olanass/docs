@@ -1,4 +1,9 @@
-# Architecture
+---
+title: "Application architecture"
+description: "Runtime boundaries, modules, persistence, and testing for the Olanas application."
+---
+
+# Application architecture
 
 The application is a single Node.js service with a static browser client. The organization reflects runtime responsibilities rather than pretending each folder is an independent npm package.
 
