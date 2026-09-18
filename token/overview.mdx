@@ -5,29 +5,37 @@ description: "Publication status and core facts for the Olanas token."
 
 This page is the canonical home for the Olanas token's identity and status.
 
-<Warning>
-  **Token deployment details are not yet published in this repository.** No contract address, sale link, ticker, or exchange listing should be treated as official based on these docs today.
-</Warning>
+<Frame caption="OLANAS token logo published in the token contract metadata">
+  <img src="/images/olanas-token.jpg" alt="OLANAS token logo" width="320" />
+</Frame>
+
+<Info>
+  OLANAS is deployed on Robinhood Chain. Always verify the full contract address before interacting: [`0x9400eB66B1320050A68F25A624985a674F033902`](https://robinhoodchain.blockscout.com/token/0x9400eB66B1320050A68F25A624985a674F033902).
+</Info>
 
 ## Token facts
 
 | Property | Official value |
 | --- | --- |
 | Token name | Olanas |
-| Ticker | Not yet published |
-| Network | Not yet published for the token |
-| Token standard | Not yet published |
-| Contract address | Not yet published |
-| Decimals | Not yet published |
-| Maximum supply | Not yet published |
+| Ticker | `OLANAS` |
+| Network | Robinhood Chain mainnet |
+| Chain ID | `4663` |
+| Token standard | ERC-20 |
+| Contract address | [`0x9400eB66B1320050A68F25A624985a674F033902`](https://robinhoodchain.blockscout.com/token/0x9400eB66B1320050A68F25A624985a674F033902) |
+| Decimals | `18` |
+| Initial and maximum supply | `1,000,000,000 OLANAS` |
 | Circulating supply | Not yet published |
-| Launch status | Not yet published |
+| Launch status | Deployed on September 17, 2026 |
 
-## What must be published before launch
+## Contract behavior
 
-- checksummed contract address and block-explorer link;
-- verified source code or an explicit explanation if verification is pending;
-- total supply and minting or burning permissions;
+The verified contract source shows that the entire initial supply was minted once to the Pons V2 bonding curve. The token contract has no additional mint function and is not a proxy. Holders can burn their own tokens, or tokens for which they have an allowance, so total supply can decrease.
+
+The deployer address stored by the contract is reference metadata only and does not grant special token privileges. Source verification does not mean the contract has received an independent security audit.
+
+## Disclosures still required
+
 - allocation percentages that total exactly 100%;
 - vesting contracts, beneficiaries, cliffs, and unlock schedules;
 - administrative roles, multisig controls, and upgradeability;

@@ -4,30 +4,30 @@ description: "Supply, allocation, vesting, and transparency framework for the Ol
 ---
 
 <Info>
-  **Status: awaiting approved tokenomics.** The framework below is ready to populate, but it deliberately contains no invented figures.
+  Onchain supply mechanics are verified. Broader allocation, circulation, vesting, and treasury disclosures have not yet been published.
 </Info>
 
 ## Supply
 
 | Metric | Value |
 | --- | --- |
-| Maximum supply | Not yet published |
-| Initial minted supply | Not yet published |
+| Maximum supply | `1,000,000,000 OLANAS` |
+| Initial minted supply | `1,000,000,000 OLANAS` |
 | Initial circulating supply | Not yet published |
-| Inflation or emissions | Not yet published |
-| Burn mechanism | Not yet published |
+| Inflation or emissions | None in the verified token contract; no additional mint function |
+| Burn mechanism | Holders can burn their own balance or use an approved allowance via `burnFrom` |
+
+The full initial supply was minted to the [Pons V2 bonding curve](https://robinhoodchain.blockscout.com/address/0x4099BA95A9219b495deaE8Ea5a0C5953bB6D517B) at deployment. Because tokens are burnable, the current total supply can fall below the initial maximum.
 
 ## Allocation
 
-| Category | Allocation | Unlock at launch | Vesting |
-| --- | ---: | ---: | --- |
-| Community and ecosystem | TBD | TBD | TBD |
-| Liquidity | TBD | TBD | TBD |
-| Treasury | TBD | TBD | TBD |
-| Team and contributors | TBD | TBD | TBD |
-| Investors or partners | TBD | TBD | TBD |
+| Onchain fact | Amount | Status |
+| --- | ---: | --- |
+| Initial bonding-curve recipient | `1,000,000,000 OLANAS` | Verified in the constructor and initial mint event |
+| Current circulating supply | Not published | Awaiting a documented methodology |
+| Team, treasury, investor, or vesting allocations | Not published | No allocation schedule is documented here |
 
-Allocation percentages must total **100%**. Each category should link to the relevant wallet, vesting contract, or public dashboard when available.
+The initial mint destination describes where supply entered circulation mechanics; it does not by itself disclose beneficial ownership, later distribution, liquidity depth, or vesting. Any future allocation breakdown should total **100%** and link to relevant wallets, vesting contracts, or public dashboards.
 
 ## Vesting disclosure standard
 
